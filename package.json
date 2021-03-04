@@ -1,0 +1,19 @@
+{
+  "name": "hyp",
+  "version": "1.0.0",
+  "description": "hyp-vue2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NimbleWing/HYP.git"
+  },
+  "author": "NimbleWing",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NimbleWing/HYP/issues"
+  },
+  "homepage": "https://github.com/NimbleWing/HYP#readme"
+}
