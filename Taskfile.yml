@@ -1,0 +1,17 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  init:
+    desc: Install dependencies
+    cmds: 
+      - yarn
+  dev:
+    desc: Run Desktop development
+    cmds:
+      - yarn tauri dev
+  dev-android:
+    desc: Run Android development
+    cmds: 
+      - yarn tauri android dev
