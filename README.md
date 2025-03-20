@@ -6,7 +6,7 @@
 | 名称                                          | 当前使用版本                                                       | 最新版本                                                           |
 | --------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
 | [Rust](https://doc.rust-lang.org/book/)       | ![rust version](https://img.shields.io/badge/-1.85.1-blue.svg)     | ![rust version](https://img.shields.io/badge/-1.85.1-blue.svg)     |
-| [TypeScript](https://www.typescriptlang.org/) | ![typescript version](https://img.shields.io/badge/~5.6.2-blue.svg) | ![typescript version](https://img.shields.io/npm/v/typescript.svg?label=) |
+| [TypeScript](https://www.typescriptlang.org/) | ![typescript version](https://img.shields.io/badge/^5.8.2-blue.svg) | ![typescript version](https://img.shields.io/npm/v/typescript.svg?label=) |
 
 
 ## 工具链
