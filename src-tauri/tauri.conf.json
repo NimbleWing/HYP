@@ -25,7 +25,8 @@
         "url": "./splashscreen.html",
         "label": "splashscreen",
         "fullscreen": false,
-        "center": true
+        "center": true,
+        "shadow": false
       }
     ],
     "security": {
