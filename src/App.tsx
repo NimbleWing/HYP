@@ -1,26 +1,30 @@
 import { useEffect, useState } from "react";
-import { invoke , isTauri} from "@tauri-apps/api/core";
+import { invoke, isTauri } from "@tauri-apps/api/core";
 import { isEnabled } from "@tauri-apps/plugin-autostart";
+import {
+  MantineProvider
+} from "@mantine/core";
 import "./App.css";
+import "@mantine/core/styles.css";
 
 function App() {
   const [greetMsg, setGreetMsg] = useState("");
   const [name, setName] = useState("");
   const [launchAtLogin, setLaunchAtLogin] = useState(true);
 
-  useEffect(()=> {
-    const fetchAutoStartStatus = async() => {
-      if(isTauri()) {
+  useEffect(() => {
+    const fetchAutoStartStatus = async () => {
+      if (isTauri()) {
         try {
           const status = await isEnabled();
           setLaunchAtLogin(status);
-        } catch(error) {
+        } catch (error) {
           console.error("Failed to fetch autostart status:", error);
         }
       }
     }
     fetchAutoStartStatus();
-  },[]);
+  }, []);
   const enableAutoStart = async () => {
     if (isTauri()) {
       try {
@@ -31,7 +35,7 @@ function App() {
     }
     setLaunchAtLogin(true);
   };
-  
+
   const disableAutoStart = async () => {
     if (isTauri()) {
       try {
@@ -49,30 +53,34 @@ function App() {
   }
 
   return (
-    <main className="container">
-      
-      
-      <button
-        onClick={()=>{
-          !launchAtLogin?enableAutoStart():disableAutoStart()
-        }}
-      >{launchAtLogin+""}</button>
-      <form
-        className="row"
-        onSubmit={(e) => {
-          e.preventDefault();
-          greet();
-        }}
-      >
-        <input
-          id="greet-input"
-          onChange={(e) => setName(e.currentTarget.value)}
-          placeholder="Enter a name..."
-        />
-        <button type="submit">Greet</button>
-      </form>
-      <p>{greetMsg}</p>
-    </main>
+    <MantineProvider>
+
+
+      <main className="container">
+
+
+        <button
+          onClick={() => {
+            !launchAtLogin ? enableAutoStart() : disableAutoStart()
+          }}
+        >{launchAtLogin + ""}</button>
+        <form
+          className="row"
+          onSubmit={(e) => {
+            e.preventDefault();
+            greet();
+          }}
+        >
+          <input
+            id="greet-input"
+            onChange={(e) => setName(e.currentTarget.value)}
+            placeholder="Enter a name..."
+          />
+          <button type="submit">Greet</button>
+        </form>
+        <p>{greetMsg}</p>
+      </main>
+    </MantineProvider>
   );
 }
 

@@ -18,5 +18,6 @@
 | [React](https://react.dev/)                   | ![react version](https://img.shields.io/badge/-19.0.0-blue.svg)    | ![react version](https://img.shields.io/npm/v/react.svg)           |
 | [Vite](https://vite.dev/)                     | ![vite version](https://img.shields.io/badge/-^6.2.2-blue.svg)      | ![vite version](https://img.shields.io/npm/v/vite.svg)             |
 | [GoTask](https://taskfile.dev/)               | ![goTask version](https://img.shields.io/badge/-3.42.1-blue.svg)   | ![goTask version](https://img.shields.io/npm/v/@go-task/cli.svg)     |
-| [tauri-plugin-autostart](https://mantine.dev/)               | ![tauri-plugin-autostart version](https://img.shields.io/badge/-2-blue.svg)   | ![tauri-plugin-autostart version](https://img.shields.io/crates/v/tauri-plugin-autostart.svg)     |
+| [Tauri-plugin-autostart](https://mantine.dev/)               | ![autostart version](https://img.shields.io/badge/-2-blue.svg)   | ![autostart version](https://img.shields.io/crates/v/tauri-plugin-autostart.svg)     |
+| [Mantine](https://mantine.dev/)               | ![mantine version](https://img.shields.io/badge/-^7.17.2-blue.svg)   | ![mantine version](https://img.shields.io/npm/v/@mantine/core.svg)     |
 
