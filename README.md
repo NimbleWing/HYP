@@ -21,4 +21,5 @@
 | [Tauri-plugin-autostart](https://mantine.dev/)               | ![autostart version](https://img.shields.io/badge/-2-blue.svg)   | ![autostart version](https://img.shields.io/crates/v/tauri-plugin-autostart.svg)     |
 | [Mantine](https://mantine.dev/)               | ![mantine version](https://img.shields.io/badge/-^7.17.2-blue.svg)   | ![mantine version](https://img.shields.io/npm/v/@mantine/core.svg)     |
 | [React-router](https://mantine.dev/)               | ![reactRouter version](https://img.shields.io/badge/-^7.4.0-blue.svg)   | ![mantine version](https://img.shields.io/npm/v/react-router.svg)     |
+| [React-icons](https://mantine.dev/)               | ![reactIcons version](https://img.shields.io/badge/-^5.5.0-blue.svg)   | ![mantine version](https://img.shields.io/npm/v/react-icons.svg)     |
 
