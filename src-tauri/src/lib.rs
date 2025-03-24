@@ -1,9 +1,11 @@
+mod autostart;
 use tauri::{
     menu::{ Menu, MenuItem },
     tray::{ MouseButton, MouseButtonState, TrayIconBuilder, TrayIconEvent },
     Manager,
 };
-
+use autostart::{ change_autostart, enable_autostart };
+use tauri_plugin_autostart::MacosLauncher;
 // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
 #[tauri::command]
 fn greet(name: &str) -> String {
@@ -14,7 +16,9 @@ fn greet(name: &str) -> String {
 pub fn run() {
     tauri::Builder
         ::default()
+        .plugin(tauri_plugin_autostart::init(MacosLauncher::AppleScript, None))
         .setup(|app| {
+            enable_autostart(app);
             let quit_i = MenuItem::with_id(app, "quit", "Quit", true, None::<&str>)?;
             let menu = Menu::with_items(app, &[&quit_i])?;
 
@@ -51,10 +55,10 @@ pub fn run() {
                 .show_menu_on_left_click(false)
                 .icon(app.default_window_icon().unwrap().clone())
                 .build(app)?;
+
             Ok(())
         })
-        .plugin(tauri_plugin_opener::init())
-        .invoke_handler(tauri::generate_handler![greet])
+        .invoke_handler(tauri::generate_handler![greet, change_autostart])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }

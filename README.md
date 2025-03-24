@@ -17,5 +17,6 @@
 | [Yarn](https://classic.yarnpkg.com/en/)       | ![yarn version](https://img.shields.io/badge/-1.22.22-blue.svg)    | ![yarn version](https://img.shields.io/npm/v/yarn.svg)             |
 | [React](https://react.dev/)                   | ![react version](https://img.shields.io/badge/-19.0.0-blue.svg)    | ![react version](https://img.shields.io/npm/v/react.svg)           |
 | [Vite](https://vite.dev/)                     | ![vite version](https://img.shields.io/badge/-^6.2.2-blue.svg)      | ![vite version](https://img.shields.io/npm/v/vite.svg)             |
-| [GoTask](https://taskfile.dev/)               | ![nodejs version](https://img.shields.io/badge/-3.42.1-blue.svg)   | ![vite version](https://img.shields.io/npm/v/@go-task/cli.svg)     |
+| [GoTask](https://taskfile.dev/)               | ![goTask version](https://img.shields.io/badge/-3.42.1-blue.svg)   | ![goTask version](https://img.shields.io/npm/v/@go-task/cli.svg)     |
+| [tauri-plugin-autostart](https://mantine.dev/)               | ![tauri-plugin-autostart version](https://img.shields.io/badge/-2-blue.svg)   | ![tauri-plugin-autostart version](https://img.shields.io/crates/v/tauri-plugin-autostart.svg)     |
 
