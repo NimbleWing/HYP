@@ -16,7 +16,8 @@
     "@tauri-apps/plugin-autostart": "~2",
     "@tauri-apps/plugin-opener": "^2",
     "react": "19",
-    "react-dom": "19"
+    "react-dom": "19",
+    "react-router": "^7.4.0"
   },
   "devDependencies": {
     "@tauri-apps/cli": "^2",
