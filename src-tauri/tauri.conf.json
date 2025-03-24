@@ -15,7 +15,7 @@
         "title": "hyp",
         "width": 800,
         "height": 600,
-        "visible": false
+        "visible": true
       },
       {
         "width": 530,

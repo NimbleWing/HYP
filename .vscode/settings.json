@@ -13,7 +13,8 @@
         "Avenir",
         "autolaunch",
         "splashscreen",
-        "icns"
-
+        "icns",
+        "mantine",
+        "nowrap"
     ]
 }
