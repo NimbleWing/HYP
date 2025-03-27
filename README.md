@@ -23,4 +23,5 @@
 | [React-router](https://mantine.dev/)               | ![reactRouter version](https://img.shields.io/badge/-^7.4.0-blue.svg)   | ![mantine version](https://img.shields.io/npm/v/react-router.svg)     |
 | [React-icons](https://react-icons.github.io/react-icons/)               | ![reactIcons version](https://img.shields.io/badge/-^5.5.0-blue.svg)   | ![mantine version](https://img.shields.io/npm/v/react-icons.svg)     |
 | [Clsx](https://github.com/lukeed/clsx)               | ![clsx version](https://img.shields.io/badge/-^2.1.1-blue.svg)   | ![mantine version](https://img.shields.io/npm/v/clsx.svg)     |
+| [Tauri-plugin-shell](https://github.com/tauri-apps/plugins-workspace/tree/v2/plugins/shell)               | ![shell version](https://img.shields.io/badge/-~2-blue.svg)   | ![shell version](https://img.shields.io/crates/v/tauri-plugin-shell.svg)     |
 
