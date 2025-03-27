@@ -12,6 +12,7 @@
   "dependencies": {
     "@mantine/core": "^7.17.2",
     "@mantine/hooks": "^7.17.2",
+    "@mantine/spotlight": "^7.17.2",
     "@tauri-apps/api": "^2",
     "@tauri-apps/plugin-autostart": "~2",
     "@tauri-apps/plugin-opener": "^2",
