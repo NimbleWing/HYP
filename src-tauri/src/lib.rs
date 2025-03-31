@@ -1,35 +1,18 @@
-mod autostart;
+mod commands;
+use commands::fd_commands;
 use tauri::{
     menu::{ Menu, MenuItem },
     tray::{ MouseButton, MouseButtonState, TrayIconBuilder, TrayIconEvent },
     Manager,
 };
-use autostart::{ change_autostart, enable_autostart };
-use tauri_plugin_autostart::MacosLauncher;
-use tauri_plugin_shell::ShellExt;
-// Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
-#[tauri::command]
-fn greet(name: &str) -> String {
-    format!("Hello, {}! You've been greeted from Rust!", name)
-}
 
-#[tauri::command]
-async fn fd(app: tauri::AppHandle, message: String) -> String {
-    println!("调用fd, {}", message);
-    let sidecar_command = app.shell().sidecar("fd").unwrap().arg("README.md").arg(message);
-    let output = sidecar_command.output().await.unwrap();
-    let response = String::from_utf8(output.stdout).unwrap();
-    response
-}
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     tauri::Builder
         ::default()
-        .plugin(tauri_plugin_autostart::init(MacosLauncher::AppleScript, None))
         .plugin(tauri_plugin_shell::init())
         .setup(|app| {
-            enable_autostart(app);
             let quit_i = MenuItem::with_id(app, "quit", "Quit", true, None::<&str>)?;
             let menu = Menu::with_items(app, &[&quit_i])?;
 
@@ -69,7 +52,9 @@ pub fn run() {
 
             Ok(())
         })
-        .invoke_handler(tauri::generate_handler![greet, change_autostart,fd])
+        .invoke_handler(tauri::generate_handler![
+            fd_commands::fd_search,
+             ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }

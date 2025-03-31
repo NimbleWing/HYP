@@ -24,6 +24,30 @@ const router = createBrowserRouter([
             {
                 path: paths.dashboard.home,
                 element: LazyPage(() => import("@pages/dashboard/home"))
+            },
+            {
+                path: paths.dashboard.apps.root,
+                children: [
+                    {
+                        index: true,
+                        path: paths.dashboard.apps.root,
+                        element: <Navigate to={paths.dashboard.apps.quickSearch} replace/>,
+                    },
+                    {
+                        path: paths.dashboard.apps.quickSearch,
+                        element: LazyPage(()=> import("@pages/apps/quick-search"))
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        path: paths.dashboard.apps.root,
+        children: [
+            {
+                index: true,
+                path: paths.dashboard.apps.root,
+                element: <Navigate to={paths.dashboard.apps.root} replace />,
             }
         ]
     }

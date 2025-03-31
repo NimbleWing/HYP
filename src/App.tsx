@@ -6,9 +6,9 @@ import {
 } from "@routes/router";
 import "./App.css";
 import "@mantine/core/styles.css";
+import "@mantine/spotlight/styles.css";
 import './global.css';
 function App() {
-
 
   return (
     <MantineProvider defaultColorScheme="dark">

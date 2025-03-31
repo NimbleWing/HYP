@@ -3,7 +3,6 @@ import {
     PiChartLineUpDuotone,
     PiChatCenteredDotsDuotone,
     PiFilesDuotone,
-    PiKanbanDuotone,
     PiLockKeyDuotone,
     PiShieldCheckDuotone,
     PiSquaresFourDuotone,
@@ -12,6 +11,9 @@ import {
     PiUserPlusDuotone,
     PiUsersDuotone,
 } from "react-icons/pi";
+import {
+    LuFolderSearch2
+} from "react-icons/lu";
 import { paths } from "@routes/paths";
 
 interface MenuItem {
@@ -48,9 +50,9 @@ export const menu: MenuItem[] = [
         header: "Apps",
         section: [
             {
-                name: "Kanban",
-                href: paths.dashboard.home,
-                icon: PiKanbanDuotone,
+                name: "Quick Search",
+                href: paths.dashboard.apps.quickSearch,
+                icon: LuFolderSearch2,
             }
         ]
     },
